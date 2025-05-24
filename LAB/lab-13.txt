@@ -1,0 +1,39 @@
+
+
+		PART– A (Use collection “Stock” created in Lab-12) 
+
+1)db.Stock.createIndex({company:1})
+
+2)db.Stock.createIndex({sector:1,sales:1})
+
+3)db.Stock.getIndexes()
+
+4)db.Stock.dropIndex({company:1})
+
+5)var cursor_1 = db.Stock.find()
+  cursor_1
+
+6)db.Stock.find().limit(3)
+
+7)db.Stock.find().sort({sales:-1})
+
+8)db.Stock.find().skip(2).limit(1)
+
+9)db.Stock.find().toArray()
+
+10)db.createCollection('Company',{validator:{$jsonSchema:{bsonType:'object',required:['company','sector'],properties:{company:{bsonType:'string'},sector:{bsonType:'string'}}}}})
+
+
+
+			PART– B 
+
+1)db.createCollection('Scripts',{validator:{$jsonSchema:{bsonType:'object',required:['esp','pe','roe'],properties:{esp:{bsonType:'number'},pe:{bsonType:'number'},roe:{bsonType:'number'}}}}})
+
+2)db.createCollection('Products',{validator:{$jsonSchema:{bsonType:'object',properties:{manufacturer_details:{bsonType:'array',Name:{bsonType:'string'},contry:{bsonType:'string'},year:{bsonType:'string'}},categories:{bsonType:'array',items:{bsonType:'string'}}}}}})
+
+
+			PART-C
+
+1)db.createCollection('financial_Reports',{validator:{$jsonSchema:{bsonType:'object',required:['revenue'],properties:{revenue:{bsonType:'number'},expenses:{bsonType:'number'},netincome:{bsonType:'number'}}}}})
+
+2)db.createCollection('Student',{validator:{$jsonSchema:{bsonType:'object',properties:{name:{bsonType:'string'},address:{bsonType:'string'},mobilenumber:{bsonType:'array',items:{bsonType:'number'}},email:{bsonType:'array',items:{bsonType:'string'}}}}}})

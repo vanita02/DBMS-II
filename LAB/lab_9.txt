@@ -1,0 +1,33 @@
+
+1) db.deposit.find().pretty()
+
+2) db.deposit.findOne()
+
+3) db.deposit.insertOne({ACTNO:109,CNAME:'KIRTI',BNAME:'VIRAR',AMOUNT:3000,ADATE:'1997-05-03'})
+
+4) db.deposit.insertMany([{ACTNO:110,CNAME:'MITALI',BNAME:'ANDHERI',AMOUNT:4500,ADATE:'1995-09-04'},{ACTNO:111,CNAME:'RAJIV',BNAME:'NEHRU PLACE',AMOUNT:7000,ADATE:'1998-10-02'}])
+
+5) db.deposit.find({BNAME:{$eq:'VIRAR'}})
+
+6) db.deposit.find({$and:[{AMOUNT:{$gt:3000}},{AMOUNT:{$lt:5000}}]})
+                                                            ^
+7) db.deposit.find({$and:[{AMOUNT:{$gt:2000}},{BNAME:{$eq:'VIRAR'}}]})
+
+8) db.deposit.find({},{CNAME:1,BNAME:1,AMOUNT:1})
+
+9) db.deposit.find().sort({CNAME:1})
+
+10) db.deposit.find().sort({BNAME:-1})
+
+11) db.deposit.find().sort({ACTNO:1},{AMOUNT:-1})
+
+12) db.deposit.find().limit(2)
+
+13) db.deposit.find().skip(2).limit(1)
+
+14) db.deposit.find().skip(5).limit(2)
+
+15) db.deposit.find().count()
+11
+
+
